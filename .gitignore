@@ -87,3 +87,8 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Clone repositories
+cartpole-q-learning/
+chainer_pong/
+
