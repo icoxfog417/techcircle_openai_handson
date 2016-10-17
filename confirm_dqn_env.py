@@ -9,7 +9,7 @@ def main(episode_count):
     env = gym.make("Pong-v0")
     size = 80
     frame_merge = 4
-    agent = ChoiceAgent(1, 2, size)
+    agent = ChoiceAgent(2, 3, size)
 
     for i in range(episode_count):
         observation = env.reset()
@@ -34,10 +34,14 @@ def main(episode_count):
 
 
 def cut_play_area(observation, size):
+    background = observation[1][1]
     area = observation[35:194]
+    for c in background:
+        area[area == c] = 0
+    area[area != 0] = 1
+    area = area[:,:,0]
     im = Image.fromarray(area)
-    grayed = im.convert("L")
-    resized = grayed.resize((size, size))
+    resized = im.resize((size, size))
     array = np.array(resized, dtype=np.float32).flatten()
     return array
 
