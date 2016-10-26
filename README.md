@@ -22,8 +22,15 @@ Windows側でPythonがインストールされていてもそれはbash環境と
 3. OpenAI Gymのインストール  
 `pip install gym`でOKです。なお、インストールは`virtualenv`や`conda`を使い、仮想環境にインストールすることをお勧めします。仮想環境の作成についての詳細は、上記のリンク先の資料をご参照ください。
 4. Gymの動作確認  
-本リポジトリの中にある`confirm_hello_gym.py`を実行し動くかどうかを確認してください。上手くインストールできていれば、以下のようにCartPoleが動くはずです。特にWindowsで環境構築を行っている場合は、まずここで実行を確認しておいてください。  
-![cartpole.PNG](./images/cartpole.PNG)
+    本リポジトリの中にある`confirm_hello_gym.py`を実行し動くかどうかを確認してください。  
+
+    ```
+    python confirm_hello_gym.py
+    ```
+
+    上手くインストールできていれば、以下のようにCartPoleが動くはずです。特にWindowsで環境構築を行っている場合は、まずここで実行を確認しておいてください。
+    
+    ![cartpole.PNG](./images/cartpole.PNG)
 5. 依存モジュールのインストール  
 ここから、gymでatariのゲームが扱えるよう追加のインストールを行っていきます。[公式ページ](https://github.com/openai/gym#installing-everything)に記載の通り、atari環境を実行するのに必要なライブラリなどをインストールします。
 6. atari環境のインストール  
@@ -31,8 +38,13 @@ Windows側でPythonがインストールされていてもそれはbash環境と
 7. Chainerのインストール  
 `pip install chainer`でインストールします
 8. atariの動作確認  
- 本リポジトリの、`confirm_dqn_env.py`を実行し動くかどうか確認してください。  
- ![pong.PNG](./images/pong.PNG)
+     本リポジトリの、`confirm_dqn_env.py`を実行し動くかどうか確認してください。
+
+    ```
+    python confirm_dqn_env.py
+    ```
+
+    ![pong.PNG](./images/pong.PNG)
 
 
 これで準備は完了です。お疲れさまでした！
