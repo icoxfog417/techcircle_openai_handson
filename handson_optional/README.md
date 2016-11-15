@@ -7,7 +7,7 @@
 * まず、OpenAI Gymでアカウントを作成してください
 * アカウントを作成すると、自分のページからAPI Keyが確認できるので、これをエディタなどにコピペしておいてください  
 
-![api_key](./img/api_key.PNG)
+![api_key](./img/api_key.png)
 
 API Keyが用意できたら、`handson_3`で、`handon3.py`を実行する際`--monitor`オプションをつけて学習を行います。
 
