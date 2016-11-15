@@ -8,7 +8,7 @@
 
 この一連のプロセスを体感してみましょう。
 
-![start_openai_gym_env](./img/TechCircle18_OpenAI_Gym_27.png)
+![mdp](./img/TechCircle18_OpenAI_Gym_27.png)
 
 今回用意しているエージェントは、以下の3種類です。
 

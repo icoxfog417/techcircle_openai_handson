@@ -1,8 +1,12 @@
 import os
+import sys
+sys.path.append(os.path.join(os.path.dirname(__file__), "../"))
 import math
 import argparse
 import gym
-from agents.q_agent import Q, Agent, Trainer
+from handson_3.q import Q
+from handson_3.agent import Agent
+from handson_3.trainer import Trainer
 
 
 RECORD_PATH = os.path.join(os.path.dirname(__file__), "./upload")
@@ -14,18 +18,18 @@ def main(episodes, render, monitor):
     q = Q(
         env.action_space.n, 
         env.observation_space, 
-        bin_size=[7, 7, 7, 7],
-        low_bound=[-5, -0.5, -5, -0.5], 
-        high_bound=[5, 0.5, 5, 0.5]
+        bin_size=[3, 3, 8, 5],
+        low_bound=[None, -0.5, None, -math.radians(50)], 
+        high_bound=[None, 0.5, None, math.radians(50)]
         )
     agent = Agent(q, epsilon=0.05)
 
-    learning_decay = lambda lr, t: 1 / (t + 1) ** 0.5
-    epsilon_decay = lambda eps, t: 1 / (t + 1) ** 0.5
+    learning_decay = lambda lr, t: max(0.1, min(0.5, 1.0 - math.log10((t + 1) / 25)))
+    epsilon_decay = lambda eps, t: max(0.01, min(1.0, 1.0 - math.log10((t + 1) / 25)))
     trainer = Trainer(
         agent, 
-        gamma=0.95,
-        learning_rate=0.1, learning_rate_decay=learning_decay, 
+        gamma=0.99,
+        learning_rate=0.5, learning_rate_decay=learning_decay, 
         epsilon=1.0, epsilon_decay=epsilon_decay,
         max_step=250)
 
