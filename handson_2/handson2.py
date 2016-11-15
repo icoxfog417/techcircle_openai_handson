@@ -13,7 +13,9 @@ def main(episode_count):
     action_down = 3
     action_stop = 0
 
-    # your code here
+    agent = RandomAgent(action_number)
+    # agent = FunFunAgent(action_up, action_down, action_stop)
+    # agent = TrackAgent(action_up, action_down, action_stop)
 
     for i in range(episode_count):
         observation = env.reset()

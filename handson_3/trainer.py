@@ -31,7 +31,9 @@ class Trainer():
                 next_obs, reward, done, _ = env.step(action)
 
                 state = self.agent.q.observation_to_state(obs)
-                # your code here 1
+                future = 0 if done else np.max(self.agent.q.values(next_obs))
+                value = self.agent.q.table[state][action]
+                self.agent.q.table[state][action] += lr * (reward + self.gamma * future - value)
 
                 obs = next_obs
                 values.append(value)
@@ -46,4 +48,7 @@ class Trainer():
                     i, step, mean_step, self.agent.epsilon, lr, mean)
                     )
                 
-                # your code here 2
+                if self.epsilon_decay is not None:
+                    self.agent.epsilon = self.epsilon_decay(self.agent.epsilon, i)
+                if self.learning_rate_decay is not None:
+                    lr = self.learning_rate_decay(lr, i)

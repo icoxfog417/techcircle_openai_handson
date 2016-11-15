@@ -4,7 +4,23 @@ import gym
 
 
 def main(env_name, episode_count):
-    # your code here
+    env = gym.make(env_name)
+
+    for i in range(episode_count):
+        observation = env.reset()
+        done = False
+        score = 0
+
+        while not done:
+            env.render()
+            action = env.action_space.sample()
+            next_observation, reward, done, info = env.step(action)
+
+            observation = next_observation
+            score += reward
+
+            if done:
+                print("Episode {} is end. score={}".format(i, score))
 
 
 if __name__ == "__main__":

@@ -10,3 +10,10 @@ class Agent():
     
     def act(self, observation):
         # your code here
+        action = -1
+        if np.random.random() < self.epsilon:
+            action = np.random.choice(self.q.n_actions)
+        else:
+            action = np.argmax(self.q.values(observation))
+        
+        return action
