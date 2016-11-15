@@ -41,3 +41,4 @@ python handson2.py
 
 全て終わったら、自分なりのルールに基づいたエージェントの実装にも挑戦してみてください。
 
+[handson2.py answer](https://github.com/icoxfog417/techcircle_openai_handson/blob/answer/handson_2/handson2.py)

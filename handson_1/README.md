@@ -63,3 +63,4 @@ python handson1.py --env AirRaid-ram-v0 --episode 5
 これにより、actionを実行したことによって変化したstate(=next_observation)が毎回出力されます。  
 環境を切り替えると、観測されているobservationも変化することが確認できると思います。
 
+[handson1.py answer](https://github.com/icoxfog417/techcircle_openai_handson/blob/answer/handson_1/handson1.py)

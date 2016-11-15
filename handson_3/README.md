@@ -31,7 +31,7 @@ Q-Tableは、「位置が2の時に行動3を取ったときの行動評価は�
 実装は少し難しくなるので、今回はすでに用意したコードを作成します。
 
 実装は`handson_3/q.py`の中にあるので、興味がある方は参照してみてください。  
-`Q.values`関数によって、引数によって与えた`observation`における各アクション評価値を取り出すことができます。コード上で押さえておくべき点は、とりあえずこれだけです。
+[`Q.values`関数](https://github.com/icoxfog417/techcircle_openai_handson/blob/answer/handson_3/q.py#L55)によって、引数によって与えた`observation`における各アクション評価値を取り出すことができます。コード上で押さえておくべき点は、とりあえずこれだけです。
 
 ## Agent (agent.py)
 
@@ -63,6 +63,8 @@ Q-learningを使用する場合、Agentには探索と活用のジレンマが�
 これで、Agentの実装は終了です。
 
 しかし、このままではなにも学習しないのでずっと賢くないままです。そこで、このAgentを学習させるコードを実装します。
+
+[agent.py answer](https://github.com/icoxfog417/techcircle_openai_handson/blob/answer/handson_3/agent.py)
 
 ## Trainer (trainer.py)
 
@@ -122,3 +124,5 @@ python handson3.py --render
 ```
 
 しばらくたつと、ポールをキープする時間が長くなっていくのがわかると思います。
+
+[trainer.py answer](https://github.com/icoxfog417/techcircle_openai_handson/blob/answer/handson_3/trainer.py)
