@@ -22,7 +22,7 @@ def main(episode_count):
 
         while not done:
             env.render()
-            action = agent.act(observation)
+            action = agent.act(observation)  # agent takes observation, and decide action
             next_observation, reward, done, info = env.step(action)
 
             observation = next_observation

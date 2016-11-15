@@ -65,7 +65,7 @@ Windows側でPythonがインストールされていてもそれはbash環境と
 
 * [Let's Start OpenAI Gym](https://github.com/icoxfog417/techcircle_openai_handson/tree/master/handson_1)
  * OpenAI Gymを使って、学習環境を動かしてみましょう
-* Deploy Agent to Environment
+* [Deploy Agent to Environment](https://github.com/icoxfog417/techcircle_openai_handson/tree/master/handson_2)
  * actionを行うAgentを、学習環境の中に配置してみましょう
 * Train Agent by Reward
  * agentを、報酬により教育してみましょう。ここで、Q-learningを利用します。
