@@ -63,7 +63,7 @@ Windows側でPythonがインストールされていてもそれはbash環境と
 
 [Pythonではじめる強化学習 OpenAI Gym 体験ハンズオン 実践編](https://docs.google.com/presentation/d/16GIDaCToT0iYy6s08aL53HzRhSBeaoCK4kn983vD88k/edit?usp=sharing)
 
-* Let's Start OpenAI Gym
+* [Let's Start OpenAI Gym](https://github.com/icoxfog417/techcircle_openai_handson/tree/master/handson_1)
  * OpenAI Gymを使って、学習環境を動かしてみましょう
 * Deploy Agent to Environment
  * actionを行うAgentを、学習環境の中に配置してみましょう
@@ -71,74 +71,4 @@ Windows側でPythonがインストールされていてもそれはbash環境と
  * agentを、報酬により教育してみましょう。ここで、Q-learningを利用します。
 * [Optional] Submit Your Agent to OpenAI Gym
  * 学習させたエージェントを、OpenAI Gymに投稿してみましょう
-
-
-## 1. AI follow the Rules(15min)
-
-まずは、ルールでAIを作ってみます。`handson1_rule_ai.py`を実行してみてください。
-
-```
-python handson1_rule_ai.py
-```
-
-現在、上下に動くふんふんディフェンスが実装されています。そして圧倒的に負けていると思います。  
-このエージェントの実装は、`agents/rule_defender.py`で行われています。具体的に行動計画を決めているのは、`act`のメソッドです。
-
-```
-    def act(self, observation):
-        if len(self._plan) == 0:
-            self._plan += [self.action_up] * self._interval  # up
-            self._plan += [self.action_down] * (self._interval * 2)  # back to center & down
-            self._plan += [self.action_up] * self._interval  # back to center
-        
-        return self._plan.pop(0)
-```
-
-これを修正し、せめて1点ぐらいは返せるようにしてみてください。`observation_to_state`のメソッドで、各オブジェクトの座標をとれるようにしているので、適宜利用してください。
-なお、相手のコンピューターはめっちゃ強いです。勝利を収めた人はいち早く報告してください。拍手でほめたたえましょう！
-
-
-## 2. AI learn by Q-learning(15min)
-
-次に、Q-learningを利用して自分で学習をするようにします。Pongではちょっと複雑なので、ここではCartPoleを利用します。  
-最初に、`handson2_q_qi.py`を実行してみてください。
-
-```
-python handson2_q_qi.py  --render
-```
-
-全然安定していないと思います。なお、クリアラインは200stepsキープです。  
-実際、Q-learningの実装を行うのはそれほど大変ではありませんが、学習させるのはとても大変です。
-`handson2_q_qi.py`では様々なパラメーターが設定されているので、それをチューニングして結果がどう変わるのか見てみてください。
-
-* Q関数
- * bin_size: Cartの位置を離散値にするための幅(ヒストグラムを作るときの幅と同じようなものです)
- * low_bound/high_bound: 観測情報の下限・上限の値
-* エージェント
- * epsilon: 探索/活用の割合を決める値
-* 学習
- * learning_rate: 初期学習率
- * learning_decay: 学習率の減らし方。最初は荒く探して、あとは細かく探すのがセオリー
- * epsilon: 初期epsilon
- * epsilon_decay: 探索率の下げ方。最初はランダムに実行して(epsilonは大きな値)、経験が蓄積してきたら活用するのがセオリー
- * gamma: 報酬の割引率
- * max_step: ステップ数の上限。ここまでPoleをキープ出来たら、打ち切る
-
-なお、パラメーターのチューニングだけで250stepに到達することが可能です。チャレンジしてみましょう！
-
-
-## 3. AI learn by Deep Q-learning
-
-はじめに、以下のリポジトリをcloneしてください。
-
-[chainer_pong](https://github.com/icoxfog417/chainer_pong)
-
-cloneしたディレクトリに移って、実行をしてみてください。
-
-```
-python run.py
-```
-
-こちらは、学習に時間がかかるためすぐには結果は出ません。そのため、実装・チューニングのポイントを説明しますので講義を聞いていただければと思います。  
-良い結果が出たら、ぜひOpenAI Gymにアップロードしてみてください！
 
