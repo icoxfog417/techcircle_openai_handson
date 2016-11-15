@@ -49,6 +49,29 @@ Windows側でPythonがインストールされていてもそれはbash環境と
 
 これで準備は完了です。お疲れさまでした！
 
+### Trouble Shuooting
+
+* Windowsの場合、atari環境の実行のために`python-opengl`の追加インストールが必要かもしれません
+* Windowsの場合、Xmingでないと動かないという報告がありました
+* Python 3.5とChainer(1.17)を組み合わせて使う場合、`export CHAINER_PYTHON_350_FORCE=1`の設定が必要になる可能性があります
+
+## Lecture
+
+[Pythonではじめる強化学習 OpenAI Gym 体験ハンズオン 講義編](https://docs.google.com/presentation/d/1hU2s1bk61VGLbpAn8kREhY6BnzMR6Fe5PgDtEv9lPog/edit?usp=sharing)
+
+## Hands on
+
+[Pythonではじめる強化学習 OpenAI Gym 体験ハンズオン 実践編](https://docs.google.com/presentation/d/16GIDaCToT0iYy6s08aL53HzRhSBeaoCK4kn983vD88k/edit?usp=sharing)
+
+* Let's Start OpenAI Gym
+ * OpenAI Gymを使って、学習環境を動かしてみましょう
+* Deploy Agent to Environment
+ * actionを行うAgentを、学習環境の中に配置してみましょう
+* Train Agent by Reward
+ * agentを、報酬により教育してみましょう。ここで、Q-learningを利用します。
+* [Optional] Submit Your Agent to OpenAI Gym
+ * 学習させたエージェントを、OpenAI Gymに投稿してみましょう
+
 
 ## 1. AI follow the Rules(15min)
 
