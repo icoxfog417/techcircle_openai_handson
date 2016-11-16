@@ -61,14 +61,24 @@ Windows側でPythonがインストールされていてもそれはbash環境と
 
 ## Hands on
 
-[Pythonではじめる強化学習 OpenAI Gym 体験ハンズオン 実践編](https://docs.google.com/presentation/d/16GIDaCToT0iYy6s08aL53HzRhSBeaoCK4kn983vD88k/edit?usp=sharing)
-
 * [Let's Start OpenAI Gym](https://github.com/icoxfog417/techcircle_openai_handson/tree/master/handson_1)
  * OpenAI Gymを使って、学習環境を動かしてみましょう
 * [Deploy Agent to Environment](https://github.com/icoxfog417/techcircle_openai_handson/tree/master/handson_2)
  * actionを行うAgentを、学習環境の中に配置してみましょう
 * [Train Agent by Reward](https://github.com/icoxfog417/techcircle_openai_handson/tree/master/handson_3)
  * agentを、報酬により教育してみましょう。ここで、Q-learningを利用します。
-* [Optional] Submit Your Agent to OpenAI Gym
+* [Optional] [Submit Your Agent to OpenAI Gym](https://github.com/icoxfog417/techcircle_openai_handson/tree/master/handson_optional)
  * 学習させたエージェントを、OpenAI Gymに投稿してみましょう
+
+解答編は以下になります
+
+[Handson Answer](https://github.com/icoxfog417/techcircle_openai_handson/tree/answer)
+
+### Trouble Shuooting
+
+* Pythonはインデントで制御構造を判断するため、インデントには気を付けてください
+* インデントをつける際、空白を利用するかタブを利用するかは統一されている必要があります。ハンズオンのコードは空白を利用しているため、タブを混在させてしまわないよう、注意してください
+* コードは、UTF-8(BOM無)で保存する必要があります。Windowsの一部のエディタでは保存時Shift-JISになってしまうので、注意してください
+* コマンドの実行が上手くいかない際は、所定のフォルダにいるかどうかを確認してください。optional以外は、それぞれ該当のフォルダ上(例えば、`handson_1`ならコマンドプロンプト/ターミナルの`cd`コマンドで`handson_1`フォルダに移動してからコマンドを実行する必要があります)
+* コマンドの実行時には、仮想環境を利用している場合activateされているか、またWindowsの場合表示用の画面を立ち上げているかを確認してください
 
