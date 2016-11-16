@@ -57,7 +57,7 @@ Windows側でPythonがインストールされていてもそれはbash環境と
 
 ## Lecture
 
-[Pythonではじめる強化学習 OpenAI Gym 体験ハンズオン 講義編](https://docs.google.com/presentation/d/1hU2s1bk61VGLbpAn8kREhY6BnzMR6Fe5PgDtEv9lPog/edit?usp=sharing)
+[Pythonではじめる強化学習 OpenAI Gym 体験ハンズオン 講義編](http://www.slideshare.net/takahirokubo7792/techcircle-18-python-openai-gym)
 
 ## Hands on
 

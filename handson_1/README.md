@@ -2,8 +2,6 @@
 
 まず、OpenAI Gymを使って学習環境を動かしてみましょう。
 
-講義編の、「OpenAI Gymを動かしてみる」を参照してください。
-
 ![start_openai_gym_env](./img/TechCircle18_OpenAI_Gym_16.png)
 
 編集するファイルは、[`handson1.py`](https://github.com/icoxfog417/techcircle_openai_handson/blob/master/handson_1/handson1.py)です。
