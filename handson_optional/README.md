@@ -9,16 +9,16 @@
 
 ![api_key](./img/api_key.png)
 
-API Keyが用意できたら、`handson_3`で、`handon3.py`を実行する際`--monitor`オプションをつけて学習を行います。
+API Keyが用意できたら、`handson_3`で、`handson3.py`を実行する際`--monitor`オプションをつけて学習を行います。
 
 ```
-python handon3.py --monitor
+python handson3.py --monitor
 ```
 
 すると、学習の様子が動画として記録されます。記録ができたら、これをAPI Keyを使ってアップロードします。
 
 ```
-python handon3.py --upload 取得したAPIKey
+python handson3.py --upload 取得したAPIKey
 ```
 
 これで、結果がOpenAI Gymにアップロードされます。  
