@@ -46,3 +46,5 @@ Agentの行動ルールはそれぞれ異なるので、Agentを切り替えな�
 全て終わったら、自分なりのルールに基づいたAgentの実装にも挑戦してみてください。
 
 [handson2.py answer](https://github.com/icoxfog417/techcircle_openai_handson/blob/answer/handson_2/handson2.py)
+
+**[Go To Next: Train Agent by Reward](https://github.com/icoxfog417/techcircle_openai_handson/tree/master/handson_3)**

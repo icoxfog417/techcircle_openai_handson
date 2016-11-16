@@ -132,3 +132,5 @@ python handson3.py --render
 しばらくたつと、ポールをキープする時間が長くなっていくのがわかると思います。
 
 [trainer.py answer](https://github.com/icoxfog417/techcircle_openai_handson/blob/answer/handson_3/trainer.py)
+
+**[Go To Next: Submit Your Agent to OpenAI Gym](https://github.com/icoxfog417/techcircle_openai_handson/tree/master/handson_optional)**
