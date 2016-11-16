@@ -2,8 +2,6 @@
 
 まず、OpenAI Gymを使って学習環境を動かしてみましょう。
 
-講義編の、「OpenAI Gymを動かしてみる」を参照してください。
-
 ![start_openai_gym_env](./img/TechCircle18_OpenAI_Gym_16.png)
 
 編集するファイルは、[`handson1.py`](https://github.com/icoxfog417/techcircle_openai_handson/blob/master/handson_1/handson1.py)です。
@@ -61,3 +59,5 @@ python handson1.py --env AirRaid-ram-v0 --episode 5
 環境を切り替えると、観測されているobservationも変化することが確認できると思います。
 
 [handson1.py answer](https://github.com/icoxfog417/techcircle_openai_handson/blob/answer/handson_1/handson1.py)
+
+**[Go To Next: Deploy Agent to Environment](https://github.com/icoxfog417/techcircle_openai_handson/tree/master/handson_2)**

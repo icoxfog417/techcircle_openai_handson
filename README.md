@@ -57,15 +57,19 @@ Windows側でPythonがインストールされていてもそれはbash環境と
 
 ## Lecture
 
-[Pythonではじめる強化学習 OpenAI Gym 体験ハンズオン 講義編](https://docs.google.com/presentation/d/1hU2s1bk61VGLbpAn8kREhY6BnzMR6Fe5PgDtEv9lPog/edit?usp=sharing)
+[Pythonではじめる強化学習 OpenAI Gym 体験ハンズオン 講義編](http://www.slideshare.net/takahirokubo7792/techcircle-18-python-openai-gym)
 
 ## Hands on
 
-* [Let's Start OpenAI Gym](https://github.com/icoxfog417/techcircle_openai_handson/tree/master/handson_1)
+### [Start Handson!](https://github.com/icoxfog417/techcircle_openai_handson/tree/master/handson_1)
+
+### Contents
+
+* [Let's Start OpenAI Gym (5min)](https://github.com/icoxfog417/techcircle_openai_handson/tree/master/handson_1)
  * OpenAI Gymを使って、学習環境を動かしてみましょう
-* [Deploy Agent to Environment](https://github.com/icoxfog417/techcircle_openai_handson/tree/master/handson_2)
+* [Deploy Agent to Environment (5min)](https://github.com/icoxfog417/techcircle_openai_handson/tree/master/handson_2)
  * actionを行うAgentを、学習環境の中に配置してみましょう
-* [Train Agent by Reward](https://github.com/icoxfog417/techcircle_openai_handson/tree/master/handson_3)
+* [Train Agent by Reward (10min)](https://github.com/icoxfog417/techcircle_openai_handson/tree/master/handson_3)
  * agentを、報酬により教育してみましょう。ここで、Q-learningを利用します。
 * [Optional] [Submit Your Agent to OpenAI Gym](https://github.com/icoxfog417/techcircle_openai_handson/tree/master/handson_optional)
  * 学習させたエージェントを、OpenAI Gymに投稿してみましょう
