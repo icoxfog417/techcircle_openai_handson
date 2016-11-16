@@ -15,6 +15,7 @@ def main(env_name, episode_count):
             env.render()
             action = env.action_space.sample()
             next_observation, reward, done, info = env.step(action)
+            print(next_observation)
 
             observation = next_observation
             score += reward
