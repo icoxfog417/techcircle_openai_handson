@@ -40,8 +40,8 @@ action = agent.act(observation)
 python handson2.py
 ```
 
-Agentは、定義された`act`に従い行動していきます。  
-それぞれ行動の仕方が異なるので、Agentを切り替えながらその行動の違いを見てみてください
+Agentは、定義された`act`に従い行動していきます。Agentが決定したactionとその結果としてのrewardが確認できると思います。  
+Agentの行動ルールはそれぞれ異なるので、Agentを切り替えながらその行動の違いを見てみてください
 
 全て終わったら、自分なりのルールに基づいたAgentの実装にも挑戦してみてください。
 
