@@ -1,44 +1,48 @@
 # Deploy Agent to Environment
 
-学習環境の中に、行動を行うAgentを配置してみます。
-
-* 環境から状態を観測する
-* 観測した状態を基に行動する
-* 行動の結果、次の環境に遷移する。報酬が発生した場合それを得る
-
-この一連のプロセスを体感してみましょう。
+学習環境が作成できたため、その中に行動を行うAgentを配置してみます。  
+Agentと学習環境の関係性は、以下のようにモデル化出来ました。
 
 ![mdp](./img/TechCircle18_OpenAI_Gym_27.png)
 
-今回用意しているエージェントは、以下の3種類です。
+0. Agentはある状態に置かれる
+1. Agentは、観測した状態を基にactionをとる
+2. actionの結果、次の状態に遷移する。rewardが発生した場合それを得る
 
-* `Random Agent`: 完全にランダムに行動するAgent
-* `FunFun Agent`: フンフンディフェンスを行うAgent
-* `Track Agent`: ボールを追いかけるAgent
+このモデルを実装してみましょう。
 
-これらのエージェントは、行動を決定する方法は異なりますが、「観測した状態から、行動を決定する」という点では変わりません。コードの中では、以下の個所(25行目)でこの処理を行っています。
+今回作成しているAgentは、すべて`Agent`クラスを継承して作成しています。これにより、全ての`Agent`に`act`というメソッドを持たせています。  
+`act`メソッドの挙動は、以下のようになります。
 
 ```python
 action = agent.act(observation)
 ```
 
-では、実際にエージェントを切り替えながらその行動の違いを見てみましょう。  
-コードを実装するのは、`handson2.py`の`your code here`と書かれいている個所(16行目)になります。
+これは、まさに上記の「Agentは、観測した状態を基にactionをとる」を表現しています。  
+今回、このメソッドを実装したAgentとして以下の3種類を用意しています。
 
-各エージェントの実装コードは以下の通りです。
+* `Random Agent`: 完全にランダムに行動するAgent
+* `FunFun Agent`: フンフンディフェンスを行うAgent
+* `Track Agent`: ボールを追いかけるAgent
+
+まずは、どれでもよいのでAgentを環境の中に置き、その挙動を確認してみましょう。  
+コードを実装するのは、[`handson2.py`の`your code here`と書かれいている個所](https://github.com/icoxfog417/techcircle_openai_handson/blob/master/handson_2/handson2.py#L16)になります。
+
+各Agentの実装コードは以下の通りです。
 
 * `agent = RandomAgent(action_number)`
 * `agent = FunFunAgent(action_up, action_down, action_stop)`
 * `agent = TrackAgent(action_up, action_down, action_stop)`
 
-これらのコードを、実装する箇所に書いてみてください。その後、以下のコマンドでスクリプトを実行します。
+何れかのコードを、実装する箇所に書いてみてください。その後、以下のコマンドでプログラムを実行します。
 
 ```
 python handson2.py
 ```
 
-各エージェントごとの、挙動の違いが確認できると思います。
+Agentは、定義された`act`に従い行動していきます。  
+それぞれ行動の仕方が異なるので、Agentを切り替えながらその行動の違いを見てみてください
 
-全て終わったら、自分なりのルールに基づいたエージェントの実装にも挑戦してみてください。
+全て終わったら、自分なりのルールに基づいたAgentの実装にも挑戦してみてください。
 
 [handson2.py answer](https://github.com/icoxfog417/techcircle_openai_handson/blob/answer/handson_2/handson2.py)
