@@ -19,17 +19,19 @@ def main(episode_count):
         observation = env.reset()
         done = False
         agent.init()
+        name = agent.__class__.__name__
 
         while not done:
             env.render()
             action = agent.act(observation)  # agent takes observation, and decide action
             next_observation, reward, done, info = env.step(action)
+            print("{} takes action={}, and get reward={}.".format(name, action, reward))
 
             observation = next_observation
             agent.reward += reward
 
             if done:
-                print("Episode {}: {} gets reward={}.".format(i, agent.__class__.__name__, agent.reward))
+                print("Episode {}: {} gets total reward={}.".format(i, name, agent.reward))
 
 
 if __name__ == "__main__":

@@ -48,9 +48,8 @@ python handson1.py
 python handson1.py --env AirRaid-ram-v0 --episode 5
 ```
 
-また、各環境でどのような「状態」が観測されているかを見ることができます。`print`文を使うことで、観測されている`observation`を出力することができます。
-
-`env.step`を実行している行の下に、以下のようにprint文を追加してみてください。
+実際に、各環境でどのような「状態」が観測されているかを見てみます。  
+`env.step`を実行している行の下に、以下のように観測したobservationを出力するprint文を追加してください。
 
 ```python
             next_observation, reward, done, info = env.step(action)
@@ -58,7 +57,7 @@ python handson1.py --env AirRaid-ram-v0 --episode 5
 
 ```
 
-これにより、actionによって遷移した次の状態(=next_observation)が出力されるようになります。  
+これにより、actionによって遷移した次の状態(=next_observation)が出力されるようになりました。  
 環境を切り替えると、観測されているobservationも変化することが確認できると思います。
 
 [handson1.py answer](https://github.com/icoxfog417/techcircle_openai_handson/blob/answer/handson_1/handson1.py)
